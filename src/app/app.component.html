@@ -1,5 +1,21 @@
-<h1>{{title}}</h1>
-
-<app-coin-details></app-coin-details>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container class="drawer-container" >
+    <mat-sidenav #sidenav  class="sidenav" mode="side" [opened]="true">
+        <div class="logo-container">
+            <div class="avatar-logo" style="background-image: url(../assets/media/cryptocurrency.png);">
+               
+            </div>
+            <div class="logo-typo">
+                CoinSeeker
+            </div>
+            
+        </div>
+        <h1> Home </h1>
+        <h1> Coins </h1>
+        <h1> Markets </h1>
+        <h1> Global Stats </h1>
+        <h1> Exchanges </h1>
+    </mat-sidenav>
+    <div #content class="sidenav-content">
+        <app-coin-details></app-coin-details>
+    </div>
+</mat-sidenav-container>

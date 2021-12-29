@@ -19,7 +19,7 @@ export class CoinDetailsComponent implements OnInit {
   }
 
   getCoin(): void{
-    const id = 1;
+    const id = 2;
     this.apiService.getCoin(id)
       .subscribe(resp => {this.coin = resp.data.coin, this.coinBase = resp.data.base});
   }

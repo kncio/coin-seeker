@@ -1,0 +1,48 @@
+.drawer-container {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+  }
+  
+.sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+.sidenav {
+    background-color: rgb(51, 51, 122);
+    padding: 20px;
+    position: absolute;
+    width: 300px;
+}
+
+.avatar-logo{
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 40px;
+  -webkit-background-clip: padding-box;
+  border-radius: 40px;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+}
+
+.logo-container {
+  align-items: center baseline;
+  display: flex;
+  width: 100%;
+  margin: 4px 4px 40px 4px;
+}
+
+.logo-typo {
+  padding-left: 12px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 30px;
+  color: rgb(165, 202, 128);
+}

@@ -1,0 +1,46 @@
+.ant-col {
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+}
+.coin-desc-link {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 20px;
+}
+.coin-desc {
+    flex: 0.5 1;    
+}
+
+p {
+    color: rgba(26, 74, 235, 0.85);
+    overflow-wrap: break-word;
+}
+.ant-row{
+    flex-flow: row wrap;
+}
+.coin-link {
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-radius: 8px;
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    padding: 20px;
+}
+.coin-links {
+    flex: 0.5 1;
+    padding: 0 20px;
+}
+
+.link-name {
+    text-transform: capitalize;
+}
+.ant-typography {
+    color: rgba(0,0,0,.85);
+    overflow-wrap: break-word;
+}

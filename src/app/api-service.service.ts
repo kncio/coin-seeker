@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { coinByID, coins, X_RAPIDAPI_HOST_KEY, X_RAPIDAPI_HOST_VALUE, X_RAPIDAPI_KEY_KEY } from 'src/commons/apiMethods';
+import { coinByID, coinHistory, coins, exchanges, globalStats, markets, X_RAPIDAPI_HOST_KEY, X_RAPIDAPI_HOST_VALUE, X_RAPIDAPI_KEY_KEY } from 'src/commons/apiMethods';
 import { Coin } from 'src/models/coin';
 import { GetCoinResponse } from 'src/models/get.coin.response';
 
@@ -29,10 +29,35 @@ export class ApiServiceService {
     return response;
   }
   
+  //TODO:
   getCoins(): Observable<Object> {
 
     const url_method = `${this.baseUrl}/${coins}`
 
-    return this.http.get(url_method, {headers: this.headers}).pipe()
+    return this.http.get(url_method, {headers: this.headers}).pipe();
+  }
+   //TODO:
+  getMarkets(): Observable<Object> {
+    const url_method = `${this.baseUrl}/${markets}`;
+
+    return this.http.get(url_method, {headers: this.headers}).pipe();
+  }
+  //TODO:
+  getExchanges(): Observable<Object> {
+    const url_method = `${this.baseUrl}/${exchanges}`;
+
+    return this.http.get(url_method, {headers: this.headers}).pipe();
+  }
+   //TODO:
+  getGlobalStats(): Observable<Object> {
+    const url_method = `${this.baseUrl}/${globalStats}`;
+
+    return this.http.get(url_method, {headers: this.headers}).pipe();
+  }
+   //TODO:
+  getCoinHistory(id: number): Observable<Object> {
+    const url_method = `${this.baseUrl}/${coinHistory}`;
+
+    return this.http.get(url_method, {headers: this.headers}).pipe();
   }
 }

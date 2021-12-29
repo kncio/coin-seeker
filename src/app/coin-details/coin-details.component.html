@@ -1,5 +1,17 @@
-<div *ngIf="coin">
-     <h2>
-         {{coin.id}}
-     </h2>
+<div class="ant-col coin-desc-link" *ngIf="coin">
+    
+    <div class="coin-desc">
+        <h3>Whats about {{coin.name}}</h3>
+        <div [innerHTML]="coin.description" ></div>
+    </div>
+    <div class="ant-col coin-links"> 
+        <h3>{{coin.name}} Links</h3>
+        <div *ngFor="let link of coin.links"  class="ant-row coin-link">
+             <h5 class="link-name ant-typography">{{link.type}}</h5>
+             <a href={{link.url}} >{{link.name}}</a>
+            
+        </div>
+    </div>
 </div>
+
+

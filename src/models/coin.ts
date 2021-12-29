@@ -1,5 +1,5 @@
 export interface Coin {
-    
+     name: string;
      id: Number;
      uuid: string;
      slug: string;
@@ -10,7 +10,7 @@ export interface Coin {
      iconUrl: string;
      websiteUrl: string;
      socials: [];
-     links: [];
+     links: LinkObject[];
      confirmedSupply: boolean;
      numberOfMarkets: number;
      numberOfExchanges: number;
@@ -28,4 +28,10 @@ export interface Coin {
      history:[];
      allTimeHigh: object;
      penalty: boolean;
+}
+
+export interface LinkObject {
+     name: string;
+     type: string;
+     url: string;
 }

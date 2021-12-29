@@ -13,6 +13,9 @@ import { ExchangeListTileComponent } from './exchange-list-tile/exchange-list-ti
 import { GlobalStatsComponent } from './global-stats/global-stats.component';
 import { CoinHistoryComponent } from './coin-history/coin-history.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
