@@ -12,6 +12,7 @@ import { ExchangesComponent } from './exchanges/exchanges.component';
 import { ExchangeListTileComponent } from './exchange-list-tile/exchange-list-tile.component';
 import { GlobalStatsComponent } from './global-stats/global-stats.component';
 import { CoinHistoryComponent } from './coin-history/coin-history.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CoinHistoryComponent } from './coin-history/coin-history.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Coin } from 'src/models/coin';
+import { CoinResponseBase, GetCoinResponse } from 'src/models/get.coin.response';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-coin-details',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoinDetailsComponent implements OnInit {
 
-  constructor() { }
+  coin: Coin | undefined;
+  coinBase: CoinResponseBase | undefined;
+  constructor(private apiService: ApiServiceService) { }
 
   ngOnInit(): void {
+    this.getCoin()
+  }
+
+  getCoin(): void{
+    const id = 1;
+    this.apiService.getCoin(id)
+      .subscribe(resp => {this.coin = resp.data.coin, this.coinBase = resp.data.base});
   }
 
 }
