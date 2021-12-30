@@ -1,3 +1,64 @@
+
+<div #header  *ngIf="coin" class="header-center">
+    <h1>{{coin.name}} details and price chart</h1>
+    <h3>{{coin.name}} live price in US dollars. View value statistics, market cap and supply.</h3>
+</div>
+
+<div #chart>
+
+</div>
+
+<div class="col-layout" *ngIf="coin"> 
+    <div #valueStats>
+        <h3>{{coin.name}} Value Statistics</h3>
+        <p>An overview showing the stats of {{coin.name}}</p>
+        <div class="col-layout coin-stats">
+            <a>Price to USD</a>
+            <a>${{coin.price}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Coin Rank</a>
+            <a>{{coin.rank}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>24h Volume</a>
+            <a>${{coin.volume}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Market Cap</a>
+            <a>${{coin.marketCap}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>All-time-high</a>
+            <a>{{coin.rank}}</a>
+        </div>
+    </div>
+    <div #otherStats>
+        <h3>Other Statistics</h3>
+        <p>An overview showing general stats </p>
+        <div class="col-layout coin-stats">
+            <a>Number of Markets</a>
+            <a>${{coin.listedAt}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Number of Exchanges</a>
+            <a>{{coin.listedAt}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Aproved Supply</a>
+            <a>${{coin.listedAt}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Total Supply</a>
+            <a>${{coin.listedAt}}</a>
+        </div>
+        <div class="col-layout coin-stats">
+            <a>Circulating Supply</a>
+            <a>${{coin.listedAt}}</a>
+        </div>
+    </div>
+</div>
+
 <div class="ant-col coin-desc-link" *ngIf="coin">
     
     <div class="coin-desc">

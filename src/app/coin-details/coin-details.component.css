@@ -3,6 +3,12 @@
     min-height: 1px;
     position: relative;
 }
+.col-layout {
+    max-width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
 .coin-desc-link {
     display: flex;
     gap: 40px;
@@ -16,7 +22,7 @@
 }
 
 p {
-    color: rgba(26, 74, 235, 0.85);
+    color: rgba(196, 255, 245, 0.85);
     overflow-wrap: break-word;
 }
 .ant-row{
@@ -28,9 +34,10 @@ p {
     border-top: 1px solid #ffffff;
     border-radius: 8px;
     display: flex;
-    background-color: gray;
+    background-color: rgb(190, 174, 174);
     justify-content: space-between;
     padding: 20px;
+    margin: 4px;
 }
 .coin-links {
     flex: 0.5 1;
@@ -43,4 +50,22 @@ p {
 .ant-typography {
     color: rgba(0,0,0,.85);
     overflow-wrap: break-word;
+}
+
+.coin-stats{
+    justify-content:space-between;
+    padding: 8px;
+    border-bottom: 1px solid #245575;
+}
+.coin-stats:hover{
+    background-color: beige;
+    color: blue;
+}
+
+.header-center {
+    color: aqua;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
 }

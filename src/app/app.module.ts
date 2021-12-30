@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatIconModule } from '@angular/material/icon'
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
 
 @NgModule({
   declarations: [
@@ -36,7 +38,10 @@ import { MatSidenavModule } from '@angular/material/sidenav'
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    ChartsModule,
+    WavesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
