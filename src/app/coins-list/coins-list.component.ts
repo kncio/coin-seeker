@@ -26,10 +26,16 @@ export class CoinsListComponent implements OnInit {
   getCoins(): void{
     this.apiService.getCoins().subscribe(response => {
       this.coinsResponse = response;
-      // this.coins = response.data.coins.map((coin, index, _) => );
+      this.coins = response.data.coins.map<Coin>(coin => this.formatStrings(coin));
     });
   }  
 
+  formatStrings(coin: Coin): Coin {
+    const result : Coin = coin;
+    result.price = millify(Number(result.price));
+    result.marketCap = millify(Number(result.marketCap));
+    return result; 
+  }
 
   navigate(id:Number): void{
     this.router.navigateByUrl(`/coin/${id}`);

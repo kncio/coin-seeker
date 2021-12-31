@@ -19,6 +19,19 @@ mat-grid-tile {
     border-radius: 4px;
     min-width: 250px;
     max-width: 25%;
+    
+}
+.ant-card-hoverable {
+    border: 1px solid rgb(184, 171, 127);
+    cursor: pointer;
+    transition: box-shadow .9s,border-color .9s ,opacity .5s, border .8s;
+    opacity: 0.8;
+}
+.ant-card-hoverable:hover {
+    cursor: pointer;
+    opacity: 1;
+    border: 2px solid yellow;
+    background-color: whitesmoke;
 }
 .coin-card-container{
     

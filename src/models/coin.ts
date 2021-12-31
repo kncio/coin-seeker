@@ -18,7 +18,7 @@ export interface Coin {
      numberOfExchanges: number;
      type: string;
      volume: number;
-     marketCap: number;
+     marketCap: string;
      price: string;
      circulatingSupply: number;
      totalSupply: number;

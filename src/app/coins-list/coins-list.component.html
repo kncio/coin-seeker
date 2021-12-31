@@ -3,7 +3,7 @@
 </div>
 <div class="ant-row" *ngIf="coins">
     <div *ngFor="let coin of coins">
-        <div class="coin-card">
+        <div class="coin-card ant-card-hoverable">
             <div (click)="navigate(coin.id)">
                 <div class="coin-card-container">
                     <div class="coin-card-header">
@@ -18,9 +18,9 @@
                         </div>
                     </div>
                     <div class="coin-card-body">
-                        <p>Price: {{coin.price}}</p>
-                        <p>Market Cap: 1</p>
-                        <p>Daily Change: {{coin.change}}</p>
+                        <p>Price: {{coin.price}} USD</p>
+                        <p>Market Cap: {{coin.marketCap}}</p>
+                        <p>Daily Change: {{coin.change}}  %</p>
                     </div>
                 </div>
             </div>
