@@ -8,14 +8,18 @@
                 CoinSeeker
             </div>
             
-        </div>
-        <h1> Home </h1>
-        <h1> Coins </h1>
-        <h1> Markets </h1>
-        <h1> Global Stats </h1>
-        <h1> Exchanges </h1>
+        </div> 
+        <nav>
+            <h1 routerLink="/home"> Home </h1>
+            <h1 routerLink="/coin/8"> Coins </h1>
+            <h1 routerLink="/markets"> Markets </h1>
+            <h1 > Global Stats </h1>
+            <h1 router="/exchanges"> Exchanges </h1>
+        </nav>
+        
+
     </mat-sidenav>
     <div #content class="sidenav-content">
-        <app-coin-details></app-coin-details>
+        <router-outlet></router-outlet>
     </div>
 </mat-sidenav-container>

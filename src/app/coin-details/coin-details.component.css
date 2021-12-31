@@ -18,7 +18,8 @@
     padding-top: 20px;
 }
 .coin-desc {
-    flex: 0.5 1;    
+    flex: 0.5 1;
+    font-size: larger;    
 }
 
 p {
@@ -67,5 +68,9 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 40px;
+}
+
+.chart-layout{
     margin: 40px;
 }

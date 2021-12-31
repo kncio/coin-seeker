@@ -2,10 +2,20 @@
 <div #header  *ngIf="coin" class="header-center">
     <h1>{{coin.name}} details and price chart</h1>
     <h3>{{coin.name}} live price in US dollars. View value statistics, market cap and supply.</h3>
+    
+    
 </div>
 
-<div #chart>
-
+<div  *ngIf="chartLoaded == true" class="chart-layout">
+    <canvas mdbChart
+        [chartType]="chartType"
+        [datasets]="priceHistoryDataset"
+        [labels]="chartLabels"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true"
+        >
+    </canvas>
 </div>
 
 <div class="col-layout" *ngIf="coin"> 
