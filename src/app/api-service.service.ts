@@ -5,6 +5,7 @@ import { coinByID, coinHistory, coins, exchanges, globalStats, markets, X_RAPIDA
 import { Coin } from 'src/models/coin';
 import { CoinHistory } from 'src/models/coinHistory';
 import { GetCoinResponse } from 'src/models/get.coin.response';
+import { GetCoinsResponse } from 'src/models/get.coins.response';
 
 
 @Injectable({
@@ -30,12 +31,11 @@ export class ApiServiceService {
     return response;
   }
   
-  //TODO:
-  getCoins(): Observable<Object> {
+  getCoins(): Observable<GetCoinsResponse> {
 
     const url_method = `${this.baseUrl}/${coins}`
 
-    return this.http.get(url_method, {headers: this.headers}).pipe();
+    return this.http.get<GetCoinsResponse>(url_method, {headers: this.headers}).pipe();
   }
    //TODO:
   getMarkets(): Observable<Object> {

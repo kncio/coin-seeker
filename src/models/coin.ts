@@ -1,3 +1,5 @@
+import {millify} from 'millify';
+
 export interface Coin {
      name: string;
      id: Number;
@@ -28,6 +30,7 @@ export interface Coin {
      history:[];
      allTimeHigh: object;
      penalty: boolean;
+
 }
 
 export interface LinkObject {

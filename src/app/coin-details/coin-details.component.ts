@@ -4,7 +4,7 @@ import { Coin } from 'src/models/coin';
 import { ChartPoint, CoinHistory } from 'src/models/coinHistory';
 import { CoinResponseBase, GetCoinResponse } from 'src/models/get.coin.response';
 import { ApiServiceService } from '../api-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -47,8 +47,6 @@ export class CoinDetailsComponent implements OnInit {
     
   }
 
-  
-
   ngOnInit(): void {
     this.getCoin();
     this.getCoinHistory();
@@ -63,7 +61,7 @@ export class CoinDetailsComponent implements OnInit {
   getCoinHistory(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     const range = "7d";
-
+      
     this.coinHistoryObservable = this.apiService.getCoinHistory(id,range);
     this.coinHistoryObservable.subscribe(resp => {this.coinHistory = resp.data.history});
     this.coinHistoryObservable.subscribe(resp => this.transformHistory());

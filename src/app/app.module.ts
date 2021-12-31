@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule } from '@angular/material/icon'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
 
 @NgModule({
@@ -41,7 +43,9 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
     MatSidenavModule,
     MatIconModule,
     ChartsModule,
-    WavesModule
+    WavesModule,
+    MatProgressSpinnerModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

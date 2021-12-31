@@ -1,0 +1,49 @@
+mat-grid-tile {
+    background: lightblue;
+}
+
+.ant-row{
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 65vh !important;
+    row-gap: 24px;
+    margin: 20px;
+    align-self: center;
+}
+
+.coin-card {
+    display: block;
+    margin: 8px;
+    background-color: beige;
+    color: black;
+    border-radius: 4px;
+    min-width: 250px;
+    max-width: 25%;
+}
+.coin-card-container{
+    
+}
+.coin-card-body{
+    display: flex
+}
+.coin-card-header{
+    padding: 8px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid black ;
+    /* justify-content:space-between; */
+}
+.coin-card-body{
+    margin-top: 20px;
+    display: block;
+    padding: 8px;
+}
+.crypto-image{
+    width: 25px;
+}
+.header-title{
+    flex: 1 1;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}

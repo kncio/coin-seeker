@@ -1,1 +1,29 @@
-<p>coins-list works!</p>
+<div *ngIf="!coins">
+    <mat-spinner></mat-spinner>
+</div>
+<div class="ant-row" *ngIf="coins">
+    <div *ngFor="let coin of coins">
+        <div class="coin-card">
+            <div (click)="navigate(coin.id)">
+                <div class="coin-card-container">
+                    <div class="coin-card-header">
+                        <div class="header-title">
+                            <h3 style="margin: 0px;">
+                                {{coin.name}}
+                            </h3>
+                        </div>
+                      
+                        <div >
+                            <img class="crypto-image" src={{coin.iconUrl}}>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <p>Price: {{coin.price}}</p>
+                        <p>Market Cap: 1</p>
+                        <p>Daily Change: {{coin.change}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
