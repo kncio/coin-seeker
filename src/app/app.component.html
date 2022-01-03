@@ -1,4 +1,4 @@
-<mat-sidenav-container class="drawer-container" >
+<mat-sidenav-container>
     <mat-sidenav #sidenav  class="sidenav" mode="side" [opened]="true">
         <div class="logo-container">
             <div class="avatar-logo" style="background-image: url(../assets/media/cryptocurrency.png);">
@@ -10,11 +10,10 @@
             
         </div> 
         <nav>
-            <h1 routerLink="/home"> Home </h1>
-            <h1 routerLink="/coins"> Coins </h1>
-            <h1 routerLink="/markets"> Markets </h1>
-            <h1 > Global Stats </h1>
-            <h1 routerLink="/exchanges"> Exchanges </h1>
+            <h1 routerLink="/home" class="navigator"> Home </h1>
+            <h1 routerLink="/coins" class="navigator"> Coins </h1>
+            <h1 routerLink="/markets" class="navigator"> Markets </h1>
+            <h1 routerLink="/exchanges" class="navigator"> Exchanges </h1>
         </nav>
         
 

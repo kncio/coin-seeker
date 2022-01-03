@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<div *ngIf="globalStats">
+    <div class="details-container">
+        <h2>Global Crypto Stats</h2>
+    </div>
+    <div class="ant-col">
+        <div class="details-container">
+            <p>Total Cryptocurrencies</p>
+            <p>{{globalStats.totalCoins}}</p>
+            <p>Total MarketCap</p>
+            <p>{{globalStats.totalMarketCap}}</p>
+            <p>Total Matrkets</p>
+            <p>{{globalStats.totalMarkets}}</p>
+        </div>
+        <div class="details-container">
+            <p>Total Exchanges</p>
+            <p>{{globalStats.totalExchanges}}</p>
+            <p>Total 24h Volume</p>
+            <p>{{globalStats.total24hVolume}}</p>
+        </div>
+    </div>
+    
+</div>
+<h2 class="news-header">Cryptocurrencies latest world news</h2>
+<div class="container">
+    <div class="row" *ngIf="news">
+        <div  class="col-md-4" *ngFor="let new of news">
+             <mdb-card class="news-card">
+                <mdb-card-body class="news-card-body">
+                    <mdb-card-title>
+                        <h5>{{new.name}}</h5>
+                    </mdb-card-title>
+                    <mdb-card-text>
+                        <p class="news-card-description">
+                            {{new.description}}
+                        </p>
+                    </mdb-card-text>
+                </mdb-card-body>
+                    
+            </mdb-card>
+                 
+        </div>
+    </div>
+</div>
+
+   

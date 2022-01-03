@@ -6,6 +6,7 @@ import { Coin } from 'src/models/coin';
 import { CoinHistory } from 'src/models/coinHistory';
 import { GetCoinResponse } from 'src/models/get.coin.response';
 import { GetCoinsResponse } from 'src/models/get.coins.response';
+import { GlobalStatsResponse } from 'src/models/global.stats';
 
 
 @Injectable({
@@ -49,11 +50,10 @@ export class ApiServiceService {
 
     return this.http.get(url_method, {headers: this.headers}).pipe();
   }
-   //TODO:
-  getGlobalStats(): Observable<Object> {
+  getGlobalStats(): Observable<GlobalStatsResponse> {
     const url_method = `${this.baseUrl}/${globalStats}`;
 
-    return this.http.get(url_method, {headers: this.headers}).pipe();
+    return this.http.get<GlobalStatsResponse>(url_method, {headers: this.headers}).pipe();
   }
   
   getCoinHistory(id: number,range:string): Observable<CoinHistory> {

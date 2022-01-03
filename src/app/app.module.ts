@@ -7,9 +7,7 @@ import { CoinDetailsComponent } from './coin-details/coin-details.component';
 import { CoinsListComponent } from './coins-list/coins-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MarketsComponent } from './markets/markets.component';
-import { MarketListTileComponent } from './market-list-tile/market-list-tile.component';
 import { ExchangesComponent } from './exchanges/exchanges.component';
-import { ExchangeListTileComponent } from './exchange-list-tile/exchange-list-tile.component';
 import { GlobalStatsComponent } from './global-stats/global-stats.component';
 import { CoinHistoryComponent } from './coin-history/coin-history.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule } from '@angular/material/icon'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
+import { ChartsModule, WavesModule ,MDBBootstrapModule} from 'angular-bootstrap-md'
 
 @NgModule({
   declarations: [
@@ -28,9 +26,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
     CoinsListComponent,
     DashboardComponent,
     MarketsComponent,
-    MarketListTileComponent,
     ExchangesComponent,
-    ExchangeListTileComponent,
     GlobalStatsComponent,
     CoinHistoryComponent
   ],
@@ -45,7 +41,8 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
     ChartsModule,
     WavesModule,
     MatProgressSpinnerModule,
-    MatGridListModule
+    MatGridListModule,
+    MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
