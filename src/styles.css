@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%;}
-body { margin: 0; font-family:verdana ;background-color: #e6f7ff;}
+body { margin: 0; font-family:verdana ;background-color: #fbfbfe;}
 footer{
     height: 40px;
-     background-color: darkblue; 
+     background-color: #1E1E20; 
      color: aliceblue;
      align-items: center;
      display: flex;

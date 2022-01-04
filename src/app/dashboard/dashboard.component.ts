@@ -23,7 +23,10 @@ export class DashboardComponent implements OnInit {
   }
  
   getGlobalStats(): void {
-    this.apiService.getGlobalStats().subscribe(resp=> this.formatNumber(resp.data));
+    this.apiService.getGlobalStats().subscribe(resp=> {
+      this.formatNumber(resp.data),
+      console.log(resp.toString())
+    });
   }
 
   getNews(): void{

@@ -4,10 +4,22 @@
 }
 
 .details-container{
+    margin-top: 36px;
     margin-left: 36px;
     margin-right: 36px;
+    padding: 16px;
 }
+
+.details-background{
+    position: relative;
+    background-color: #EFF2FA;
+    background: linear-gradient(to bottom right, transparent 50%, #fbfbfe 50%) bottom right/200px 80px 
+        no-repeat,
+        #EFF2FA;
+}
+
 .news-header{
+    margin-top: 24px;
     margin-left: 36px;
     margin-bottom: 24px;
 }
@@ -21,6 +33,11 @@
     max-height: 300px;
     min-height: 300px;
     overflow: hidden;
+    transition: box-shadow .9s,border-color .9s ,opacity .5s, border .8s;
+}
+.news-card:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(33,33,33,.7);
 }
 .news-card-body{
     display: flex;
@@ -31,6 +48,10 @@
 .card-image {
     height: 100px;
     /* scale: 0.2; */
+}
+
+.disabled-text{
+    color: rgba(0,0,0,.45);
 }
 
 .container {
